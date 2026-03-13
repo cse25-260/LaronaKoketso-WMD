@@ -28,7 +28,7 @@ float: left;
 .nav ul li a:hover{background: rgba(0,0,0,0.7);
                         border-radius: 6px;
 }
- .col-4{ color: rgb(0, 0, 0);}
- body{background-image:url('background-image/thumb-1920-641463.jpg') ;
-background-size: 100% 100vh;
+ .col-4{ color: rgb(255, 255, 255);}
+ body{background-image:url('background-image/perfume-bottles-mockup-with-nature-background-photo.jpeg') ;
+background-size: 100% 100%;
 background-position: center;}
