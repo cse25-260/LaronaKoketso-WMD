@@ -106,7 +106,10 @@
     const pages = document.querySelectorAll(".page");
     const searchInput = document.getElementById("search-input");
     const cartCount = document.getElementById("cart-count");
-    let cartItems = 0;
+    let cartItems = (JSON.parse(localStorage.getItem("owenScentsCart")) || [])
+        .reduce((sum, item) => sum + item.quantity, 0);
+
+    cartCount.textContent = cartItems;
 
     tabButtons.forEach(button => {
         button.addEventListener("click", () => {
@@ -136,6 +139,23 @@
 
     document.querySelectorAll(".card button").forEach(button => {
         button.addEventListener("click", () => {
+            const card = button.closest(".card");
+            const product = {
+                name: card.querySelector("h3").textContent,
+                price: Number(card.querySelector("p").textContent.replace("$", "")),
+                image: card.querySelector("img").src,
+                quantity: 1
+            };
+            const cart = JSON.parse(localStorage.getItem("owenScentsCart")) || [];
+            const existingProduct = cart.find(item => item.name === product.name);
+
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem("owenScentsCart", JSON.stringify(cart));
             cartItems++;
             cartCount.textContent = cartItems;
             button.textContent = "Added";
