@@ -10,7 +10,6 @@ background:#f8f8f8;
 color:#333;
 }
 
-/* NAVBAR */
 
 header{
 background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -53,12 +52,12 @@ color:#ffd700;
 }
 
 
-.hero{
+.banner{
 text-align:center;
 margin-top:120px;
 }
 
-.hero h2{
+.banner h2{
 font-size:50px;
 margin-bottom:15px;
 }
