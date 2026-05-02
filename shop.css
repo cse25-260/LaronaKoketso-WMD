@@ -195,6 +195,13 @@ nav ul li a:hover,
     background: #ffd700;
     color: black;
 }
+.card button.added-to-cart,
+.card button.added-to-cart:hover {
+    background: white;
+    color: green;
+    border: 1px solid green;
+}
+
 
 .newsletter {
     background: black;
