@@ -169,11 +169,13 @@
         button.addEventListener("click", () => {
             const card = button.closest(".card");
             addItemToCart(card);
-            button.textContent = "Added";
+            button.textContent = "Added to Cart";
+            button.classList.add("added-to-cart");
 
             setTimeout(() => {
                 button.textContent = "Add to Cart";
-            }, 1000);
+                   button.classList.remove("added-to-cart");
+            }, 4000);
         });
     });
      updateCartCount();
