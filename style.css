@@ -67,7 +67,7 @@ font-size:18px;
 margin-bottom:20px;
 }
 
-.banner-button {
+.banner page-button banner-button {
     display: inline-block;
     margin-top: 25px;
     padding: 12px 30px;
@@ -80,7 +80,7 @@ margin-bottom:20px;
     cursor: pointer;
 }
 
-.banner-button:hover {
+.banner page-button banner-button:hover {
     background: white;
     color: black;
 }
