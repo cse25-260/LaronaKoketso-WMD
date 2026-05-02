@@ -82,6 +82,49 @@
 <p>© 2026 LuxuryScents. All Rights Reserved.</p>
 
 </footer>
+<script>
+    function getCart() {
+        return JSON.parse(localStorage.getItem("owenScentsCart")) || [];
+    }
 
+    function saveCart(cart) {
+        localStorage.setItem("owenScentsCart", JSON.stringify(cart));
+    }
+
+    function addItemToCart(card) {
+        const productName = card.querySelector("h3").textContent;
+        const productPrice = Number(card.querySelector("p").textContent.replace("$", ""));
+        const productImage = card.querySelector("img").src;
+        const cart = getCart();
+        const existingProduct = cart.find(item => item.name === productName);
+
+        if (existingProduct) {
+            existingProduct.quantity++;
+        } else {
+            cart.push({
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1
+            });
+        }
+
+        saveCart(cart);
+    }
+
+    document.querySelectorAll(".card button").forEach(button => {
+        button.addEventListener("click", () => {
+            const card = button.closest(".card");
+            addItemToCart(card);
+            button.textContent = "Added to Cart";
+            button.classList.add("added-to-cart");
+
+            setTimeout(() => {
+                button.textContent = "Add to Cart";
+                button.classList.remove("added-to-cart");
+            }, 4000);
+        });
+    });
+</script>
 </body>
 </html>
