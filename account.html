@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account | OwenScents</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="account-header">
+    <nav class="navbar">
+      <h1 class="logo">OwenScents</h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="account.html" class="active-link">My Account</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="account-page">
+    <section class="account-banner">
+      <p class="eyebrow">My Account</p>
+      <h2>Welcome back to OwenScents</h2>
+      <p>Login or create an account to continue shopping authentic luxury fragrances.</p>
+    </section>
+
+    <section class="account-wrapper">
+      <form class="account-card login-card" id="loginForm">
+        <div class="card-heading">
+          <span>01</span>
+          <h3>Login</h3>
+        </div>
+
+        <label for="loginEmail">Email or Username</label>
+        <input type="text" id="loginEmail" placeholder="Enter your email or username">
+
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+
+        <div class="form-options">
+          <label class="checkbox-row">
+            <input type="checkbox" id="rememberMe">
+            <span>Remember me</span>
+          </label>
+
+          <a href="#" class="lost-link">Lost password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+        <p class="form-message" id="loginMessage"></p>
+      </form>
+
+      <form class="account-card register-card" id="registerForm">
+        <div class="card-heading">
+          <span>02</span>
+          <h3>Register</h3>
+        </div>
+
+        <label for="registerEmail">Email</label>
+        <input type="email" id="registerEmail" placeholder="Enter your email">
+
+        <label for="registerPassword">Password</label>
+        <input type="password" id="registerPassword" placeholder="Create a password">
+
+        <p class="privacy-text">
+          Your personal data will be used to support your shopping experience, manage access to your account,
+          and improve your OwenScents service.
+        </p>
+
+        <button type="submit">Register</button>
+        <p class="form-message" id="registerMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function redirectToShop() {
+      setTimeout(() => {
+        window.location.href = "shop.html";
+      }, 1000);
+    }
+
+    function showMessage(element, message, type) {
+      element.textContent = message;
+      element.className = "form-message " + type;
+    }
+
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+    const loginMessage = document.getElementById("loginMessage");
+    const registerMessage = document.getElementById("registerMessage");
+
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const email = document.getElementById("loginEmail").value.trim();
+      const password = document.getElementById("loginPassword").value.trim();
+
+      if (email === "" || password === "") {
+        showMessage(loginMessage, "Please enter your email or username and password.", "error");
+        return;
+      }
+
+      alert("Successfully logged in");
+      showMessage(loginMessage, "Successfully logged in. Redirecting to shop...", "success");
+      redirectToShop();
+    });
+
+    registerForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const email = document.getElementById("registerEmail").value.trim();
+      const password = document.getElementById("registerPassword").value.trim();
+
+      if (email === "" || password === "") {
+        showMessage(registerMessage, "Please enter your email and password.", "error");
+        return;
+      }
+
+      alert("Successfully registered");
+      showMessage(registerMessage, "Successfully registered. Redirecting to shop...", "success");
+      redirectToShop();
+    });
+  </script>
+</body>
+</html>
