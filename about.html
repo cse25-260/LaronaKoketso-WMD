@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | OwenScents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+  <header class="banner">
+    <nav class="navbar">
+      <h1 class="logo">OwenScents</h1>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+    </nav>
+
+    <section class="banner-content">
+      <p class="small-title">Botswana Fragrance Store</p>
+      <h2>Luxury Scents. Confident Expression.</h2>
+      <p>
+        OwenScents brings authentic, elegant, and affordable fragrances to customers who believe scent is part of personal style.
+      </p>
+      <a href="shop.html" class="banner-btn">Shop Fragrances</a>
+    </section>
+  </header>
+
+  <main>
+    <section class="about-section reveal">
+      <div class="about-text">
+        <p class="small-title">Our Story</p>
+        <h2>Founded in Botswana with a passion for fragrance.</h2>
+        <p>
+          OwenScents was founded by Owen Koketso, a Motswana entrepreneur with a vision to make premium fragrances more accessible
+          without losing the feeling of luxury. The store was created for people who want authentic perfumes that match their mood,
+          confidence, elegance, and personal expression.
+        </p>
+        <p>
+          From fresh everyday scents to bold evening fragrances, OwenScents helps customers discover perfumes that feel personal,
+          memorable, and refined.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>OwenScents Promise</h3>
+        <p>Authentic perfumes, stylish presentation, and fragrances selected with care.</p>
+      </div>
+    </section>
+
+    <section class="mission-vision reveal">
+      <article>
+        <h3>Our Mission</h3>
+        <p>
+          To provide luxury and affordable fragrances that help every customer feel confident, elegant, and unique.
+        </p>
+      </article>
+
+      <article>
+        <h3>Our Vision</h3>
+        <p>
+          To become one of Botswana’s trusted online fragrance destinations, known for authenticity, style, and excellent service.
+        </p>
+      </article>
+    </section>
+
+    <section class="why-choose reveal">
+      <p class="small-title">Why Choose Us</p>
+      <h2>Fragrance shopping made elegant and trustworthy.</h2>
+
+      <div class="features">
+        <article>
+          <span>01</span>
+          <h3>Authentic Perfumes</h3>
+          <p>We focus on genuine fragrances customers can trust.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>Luxury and Affordable</h3>
+          <p>Premium scent experiences at prices that feel reachable.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Personal Expression</h3>
+          <p>Every fragrance is chosen to help you express your identity.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="founder reveal">
+      <div>
+        <p class="small-title">Founder Spotlight</p>
+        <h2>Meet Owen Koketso</h2>
+        <p>
+          Owen Koketso is a Motswana entrepreneur and the founder of OwenScents. His goal is to build a modern fragrance store
+          that combines authenticity, elegance, and customer confidence.
+        </p>
+        <p>
+          Through OwenScents, Owen is creating a brand that celebrates both luxury and individuality.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
