@@ -67,7 +67,7 @@ font-size:18px;
 margin-bottom:20px;
 }
 
-.banner-button {
+.banner button {
   display: inline-block;
   padding: 14px 34px;
   background-color: #d6b17c;
@@ -80,7 +80,7 @@ margin-bottom:20px;
   transition: 0.3s ease;
 }
 
-.banner-button:hover {
+.banner button:hover {
   background-color: transparent;
   color: white;
   border-color: white;
