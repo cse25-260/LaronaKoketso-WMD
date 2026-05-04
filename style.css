@@ -69,24 +69,22 @@ margin-bottom:20px;
 
 .banner-button {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 34px;
   background-color: #d6b17c;
   color: #1b1512;
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
   font-size: 16px;
-  border: none;
-  cursor: pointer;
+  border: 2px solid #d6b17c;
   transition: 0.3s ease;
 }
 
-
 .banner-button:hover {
-  background-color: #f0cf96;
-  transform: translateY(-2px);
+  background-color: transparent;
+  color: white;
+  border-color: white;
 }
-
 .products{
 padding:60px 10%;
 text-align:center;
