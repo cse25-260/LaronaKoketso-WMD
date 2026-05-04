@@ -165,7 +165,7 @@
                 saveCart(cart);
         updateCartCount();
     }
-        document.querySelectorAll(".card button").forEach(button => {
+         document.querySelectorAll(".card button").forEach(button => {
         button.addEventListener("click", () => {
             const card = button.closest(".card");
             addItemToCart(card);
@@ -174,8 +174,8 @@
 
             setTimeout(() => {
                 button.textContent = "Add to Cart";
-                   button.classList.remove("added-to-cart");
-            }, 4000);
+                button.classList.remove("added-to-cart");
+            }, 1000);
         });
     });
      updateCartCount();
