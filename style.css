@@ -20,11 +20,11 @@ height:80vh;
 color:white;
 }
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
 }
 
 .logo{
@@ -32,9 +32,11 @@ font-size:28px;
 font-weight:bold;
 }
 
-nav ul{
-display:flex;
-list-style:none;
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav ul li{
