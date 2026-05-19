@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | OwenScents</title>
+    <link rel="stylesheet" href="reviews.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">OwenScents</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="reviews.html" class="active-link">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <div class="reviews-banner">
+            <h2>Customer Reviews</h2>
+            <p>Read what customers think about our fragrances.</p>
+        </div>
+    </header>
+
+    <section class="review-controls">
+        <button class="tab-button active" onclick="filterReviews('all')">All</button>
+        <button class="tab-button" onclick="filterReviews('good')">Good</button>
+        <button class="tab-button" onclick="filterReviews('average')">Average</button>
+        <button class="tab-button" onclick="filterReviews('bad')">Bad</button>
+    </section>
+
+    <section class="reviews">
+        <h2>What People Are Saying</h2>
+
+        <div class="review-container" id="reviewContainer">
+            <div class="review-card good">
+                <h3>Amogelang M.</h3>
+                <p class="product-name">Royal Oud</p>
+                <p class="stars">★★★★★</p>
+                <p>Royal Oud smells rich and lasts the whole day. I got compliments when I wore it to dinner.</p>
+                <button onclick="markHelpful(this)">Helpful <span>4</span></button>
+            </div>
+
+            <div class="review-card good">
+                <h3>Lerato K.</h3>
+                <p class="product-name">Velvet Rose</p>
+                <p class="stars">★★★★☆</p>
+                <p>Velvet Rose is soft and elegant. It is not too strong, which I like for everyday use.</p>
+                <button onclick="markHelpful(this)">Helpful <span>2</span></button>
+            </div>
+
+            <div class="review-card average">
+                <h3>Thato R.</h3>
+                <p class="product-name">Golden Musk</p>
+                <p class="stars">★★★☆☆</p>
+                <p>The scent is nice, but I expected it to last longer. It is still good for casual days.</p>
+                <button onclick="markHelpful(this)">Helpful <span>3</span></button>
+            </div>
+
+            <div class="review-card bad">
+                <h3>Kabelo S.</h3>
+                <p class="product-name">Midnight Amber</p>
+                <p class="stars">★★☆☆☆</p>
+                <p>Midnight Amber was too strong for me. I think it suits someone who likes bold perfumes.</p>
+                <button onclick="markHelpful(this)">Helpful <span>1</span></button>
+            </div>
+
+            <div class="review-card good">
+                <h3>Naledi P.</h3>
+                <p class="product-name">Royal Oud</p>
+                <p class="stars">★★★★★</p>
+                <p>The packaging was neat and the fragrance smelled classy. I would buy this again.</p>
+                <button onclick="markHelpful(this)">Helpful <span>5</span></button>
+            </div>
+
+            <div class="review-card average">
+                <h3>Boitumelo D.</h3>
+                <p class="product-name">Velvet Rose</p>
+                <p class="stars">★★★☆☆</p>
+                <p>It is a pretty fragrance, but it is a little too floral for my taste.</p>
+                <button onclick="markHelpful(this)">Helpful <span>2</span></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="write-review">
+        <h2>Write a Review</h2>
+
+        <form id="reviewForm">
+            <input type="text" id="name" placeholder="Your name">
+
+            <select id="fragrance">
+                <option value="">Select fragrance</option>
+                <option value="Royal Oud">Royal Oud</option>
+                <option value="Velvet Rose">Velvet Rose</option>
+                <option value="Midnight Amber">Midnight Amber</option>
+                <option value="Golden Musk">Golden Musk</option>
+            </select>
+
+            <select id="rating">
+                <option value="">Rating</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+
+            <textarea id="message" placeholder="Write your review"></textarea>
+
+            <button type="submit">Submit Review</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function filterReviews(type) {
+            const cards = document.querySelectorAll(".review-card");
+            const buttons = document.querySelectorAll(".tab-button");
+
+            buttons.forEach(button => button.classList.remove("active"));
+            event.target.classList.add("active");
+
+            cards.forEach(card => {
+                if (type === "all" || card.classList.contains(type)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        function markHelpful(button) {
+            const number = button.querySelector("span");
+            number.textContent = Number(number.textContent) + 1;
+            button.textContent = "Thanks!";
+            button.disabled = true;
+        }
+
+        function getStars(rating) {
+            let stars = "";
+
+            for (let i = 1; i <= 5; i++) {
+                stars += i <= rating ? "★" : "☆";
+            }
+
+            return stars;
+        }
+
+        document.getElementById("reviewForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const fragrance = document.getElementById("fragrance").value;
+            const rating = document.getElementById("rating").value;
+            const message = document.getElementById("message").value.trim();
+            const formMessage = document.getElementById("formMessage");
+
+            if (name === "" || fragrance === "" || rating === "" || message === "") {
+                formMessage.textContent = "Please fill in all fields.";
+                formMessage.style.color = "crimson";
+                return;
+            }
+
+            let reviewType = "bad";
+
+            if (rating >= 4) {
+                reviewType = "good";
+            } else if (rating == 3) {
+                reviewType = "average";
+            }
+
+            const newReview = document.createElement("div");
+            newReview.className = "review-card " + reviewType;
+            newReview.innerHTML = `
+                <h3>${name}</h3>
+                <p class="product-name">${fragrance}</p>
+                <p class="stars">${getStars(rating)}</p>
+                <p>${message}</p>
+                <button onclick="markHelpful(this)">Helpful <span>0</span></button>
+            `;
+
+            document.getElementById("reviewContainer").prepend(newReview);
+            document.getElementById("reviewForm").reset();
+            formMessage.textContent = "Your review has been added.";
+            formMessage.style.color = "green";
+        });
+    </script>
+</body>
+</html>
