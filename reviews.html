@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic page setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews | OwenScents</title>
+
+    <!-- External CSS file for reviews page styling -->
     <link rel="stylesheet" href="reviews.css">
 </head>
 
 <body>
+    <!-- Header section with navigation and page banner -->
     <header>
         <nav>
             <h1 class="logo">OwenScents</h1>
+
+            <!-- Website navigation links -->
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -21,6 +27,7 @@
             </ul>
         </nav>
 
+        <!-- Reviews page banner -->
         <div class="reviews-banner">
             <p class="eyebrow">OwenScents Community</p>
             <h2>Customer Reviews</h2>
@@ -29,21 +36,25 @@
     </header>
 
     <main>
+        <!-- Short summary of review statistics -->
         <section class="review-summary" aria-label="Review highlights">
             <article>
                 <span>4.3</span>
                 <p>Average Rating</p>
             </article>
+
             <article>
                 <span>6</span>
                 <p>Verified Reviews</p>
             </article>
+
             <article>
                 <span>24</span>
                 <p>Helpful Votes</p>
             </article>
         </section>
 
+        <!-- Review filter buttons and search bar -->
         <section class="review-controls">
             <div class="filter-buttons" aria-label="Filter reviews">
                 <button class="tab-button active" onclick="filterReviews('all', this)">All</button>
@@ -55,11 +66,14 @@
             <input type="search" id="reviewSearch" placeholder="Search reviews" oninput="searchReviews()">
         </section>
 
+        <!-- Customer reviews section -->
         <section class="reviews">
             <p class="section-kicker">Trusted notes</p>
             <h2>What People Are Saying</h2>
 
+            <!-- Review cards container -->
             <div class="review-container" id="reviewContainer">
+                <!-- Review card 1 -->
                 <div class="review-card good">
                     <div class="review-topline">
                         <span class="avatar">AM</span>
@@ -73,6 +87,7 @@
                     <button onclick="markHelpful(this)">Helpful <span>4</span></button>
                 </div>
 
+                <!-- Review card 2 -->
                 <div class="review-card good">
                     <div class="review-topline">
                         <span class="avatar">LK</span>
@@ -86,6 +101,7 @@
                     <button onclick="markHelpful(this)">Helpful <span>2</span></button>
                 </div>
 
+                <!-- Review card 3 -->
                 <div class="review-card average">
                     <div class="review-topline">
                         <span class="avatar">TR</span>
@@ -99,6 +115,7 @@
                     <button onclick="markHelpful(this)">Helpful <span>3</span></button>
                 </div>
 
+                <!-- Review card 4 -->
                 <div class="review-card bad">
                     <div class="review-topline">
                         <span class="avatar">KS</span>
@@ -112,6 +129,7 @@
                     <button onclick="markHelpful(this)">Helpful <span>1</span></button>
                 </div>
 
+                <!-- Review card 5 -->
                 <div class="review-card good">
                     <div class="review-topline">
                         <span class="avatar">NP</span>
@@ -125,6 +143,7 @@
                     <button onclick="markHelpful(this)">Helpful <span>5</span></button>
                 </div>
 
+                <!-- Review card 6 -->
                 <div class="review-card average">
                     <div class="review-topline">
                         <span class="avatar">BD</span>
@@ -140,6 +159,7 @@
             </div>
         </section>
 
+        <!-- Form section where customers can submit their own review -->
         <section class="write-review">
             <div class="review-form-copy">
                 <p class="section-kicker">Share your scent story</p>
@@ -150,6 +170,7 @@
             <form id="reviewForm">
                 <input type="text" id="name" placeholder="Your name">
 
+                <!-- Fragrance selection dropdown -->
                 <select id="fragrance">
                     <option value="">Select fragrance</option>
                     <option value="Royal Oud">Royal Oud</option>
@@ -166,18 +187,19 @@
                     <option value="Night Emperor">Night Emperor</option>
                     <option value="Atlas Woods">Atlas Woods</option>
                     <option value="Amber Knight">Amber Knight</option>
-                    <option value="Fresh Bergamont">Fresh Bergamont</option>  
-                    <option value="Smoked Pine">Smoked Pine</option>  
-                    <option value="Dark Saffron">Dark Saffron</option>  
-                    <option value="Iron Citrus">Iron Citrus</option>  
-                    <option value="Bourbon Cedar">Bourbon Cedar</option>  
-                    <option value="Noir Legend">Noir Legend</option>  
-                    <option value="Blue Horizon">Blue Horizon</option>  
-                    <option value="Imperial Spice">Imperial Spice</option>  
-                    <option value="Blush Peony">Blush Peony</option>  
-                    <option value="Pink Orchid">Pink Orchid</option>  
+                    <option value="Fresh Bergamont">Fresh Bergamont</option>
+                    <option value="Smoked Pine">Smoked Pine</option>
+                    <option value="Dark Saffron">Dark Saffron</option>
+                    <option value="Iron Citrus">Iron Citrus</option>
+                    <option value="Bourbon Cedar">Bourbon Cedar</option>
+                    <option value="Noir Legend">Noir Legend</option>
+                    <option value="Blue Horizon">Blue Horizon</option>
+                    <option value="Imperial Spice">Imperial Spice</option>
+                    <option value="Blush Peony">Blush Peony</option>
+                    <option value="Pink Orchid">Pink Orchid</option>
                 </select>
 
+                <!-- Rating selection dropdown -->
                 <select id="rating">
                     <option value="">Rating</option>
                     <option value="5">5 Stars</option>
@@ -195,19 +217,23 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
     </footer>
 
     <script>
+        // Stores the currently selected review filter
         let activeFilter = "all";
 
+        // Updates the cart number in the navigation using localStorage
         function updateCartCount() {
             const cart = JSON.parse(localStorage.getItem("owenScentsCart")) || [];
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             document.getElementById("cart-count").textContent = totalItems;
         }
 
+        // Applies both category filtering and search filtering to review cards
         function applyReviewFilters() {
             const cards = document.querySelectorAll(".review-card");
             const searchTerm = document.getElementById("reviewSearch").value.toLowerCase();
@@ -220,6 +246,7 @@
             });
         }
 
+        // Changes the active review filter when a filter button is clicked
         function filterReviews(type, selectedButton) {
             const buttons = document.querySelectorAll(".tab-button");
 
@@ -229,10 +256,12 @@
             applyReviewFilters();
         }
 
+        // Runs filtering whenever the search input changes
         function searchReviews() {
             applyReviewFilters();
         }
 
+        // Increases the helpful count when a user clicks a helpful button
         function markHelpful(button) {
             const number = button.querySelector("span");
             number.textContent = Number(number.textContent) + 1;
@@ -240,6 +269,7 @@
             button.disabled = true;
         }
 
+        // Converts a numeric rating into star symbols
         function getStars(rating) {
             let stars = "";
 
@@ -250,6 +280,7 @@
             return stars;
         }
 
+        // Handles new review form submission
         document.getElementById("reviewForm").addEventListener("submit", function(event) {
             event.preventDefault();
 
@@ -259,6 +290,7 @@
             const message = document.getElementById("message").value.trim();
             const formMessage = document.getElementById("formMessage");
 
+            // Check that all form fields are filled
             if (name === "" || fragrance === "" || rating === "" || message === "") {
                 formMessage.textContent = "Please fill in all fields.";
                 formMessage.className = "error";
@@ -267,12 +299,14 @@
 
             let reviewType = "bad";
 
+            // Assign review category based on selected rating
             if (rating >= 4) {
                 reviewType = "good";
             } else if (rating == 3) {
                 reviewType = "average";
             }
 
+            // Create a new review card and add it to the top
             const newReview = document.createElement("div");
             newReview.className = "review-card " + reviewType;
             newReview.innerHTML = `
@@ -290,11 +324,13 @@
 
             document.getElementById("reviewContainer").prepend(newReview);
             document.getElementById("reviewForm").reset();
+
             formMessage.textContent = "Your review has been added.";
             formMessage.className = "success";
             applyReviewFilters();
         });
 
+        // Update cart count when the page loads
         updateCartCount();
     </script>
 </body>
