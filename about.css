@@ -1,36 +1,32 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background: #ffffff;
-  color: #171717;
-  line-height: 1.7;
+    background: #f8f8f8;
+    color: #333;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
-}
-
-a {
-  text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
 }
 
 .banner {
-  min-height: 90vh;
-  color: #ffffff;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1600&q=80")
-    center / cover no-repeat;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)),
+        url("https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    color: white;
 }
 
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,262 +35,244 @@ nav {
 
 .logo {
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
-nav ul li {
+.nav-links li {
     margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 16px;
 }
 
-nav ul li a:hover,
-.active-link {
+.nav-links a:hover,
+.nav-links .active {
     color: #ffd700;
+}
+
 .banner-content {
-  max-width: 780px;
-  padding: 120px 8%;
+    text-align: center;
+    padding: 95px 10% 80px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .small-title {
-  margin-bottom: 12px;
-  color: #d4af37;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
+    color: #ffd700;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-bottom: 12px;
 }
 
 .banner-content h2 {
-  margin-bottom: 22px;
-  font-size: clamp(42px, 7vw, 76px);
-  line-height: 1.05;
+    font-size: 50px;
+    margin-bottom: 18px;
 }
 
 .banner-content p {
-  max-width: 650px;
-  margin-bottom: 30px;
-  color: #f1f1f1;
-  font-size: 18px;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 28px;
 }
 
 .banner-btn {
-  display: inline-block;
-  padding: 14px 34px;
-  background: #d4af37;
-  color: #000000;
-  border: 2px solid #d4af37;
-  border-radius: 4px;
-  font-weight: 700;
-  transition: all 0.3s ease;
+    display: inline-block;
+    padding: 14px 30px;
+    background: #ffd700;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
 }
 
 .banner-btn:hover {
-  background: transparent;
-  color: #d4af37;
-  transform: translateY(-3px);
+    background: white;
 }
 
 main {
-  overflow: hidden;
-}
-
-.about-section,
-.mission-vision,
-.why-choose,
-.founder {
-  padding: 90px 8%;
+    padding: 60px 10%;
 }
 
 .about-section {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 50px;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.about-text,
+.founder {
+    background: white;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-text h2,
 .why-choose h2,
 .founder h2 {
-  margin-bottom: 20px;
-  font-size: clamp(34px, 4vw, 52px);
+    font-size: 32px;
+    margin-bottom: 18px;
+    color: #111;
 }
 
-.about-text p {
-  margin-bottom: 18px;
-  color: #555555;
+.about-text p,
+.about-card p,
+.mission-vision p,
+.features p,
+.founder p {
+    line-height: 1.7;
+    margin-bottom: 14px;
 }
 
 .about-card {
-  padding: 36px;
-  background: #0b0b0b;
-  color: #ffffff;
-  border-left: 6px solid #d4af37;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    background: black;
+    color: white;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-card h3 {
-  margin-bottom: 14px;
-  color: #d4af37;
-  font-size: 28px;
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
 .mission-vision {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-  background: #0b0b0b;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
-.mission-vision article {
-  padding: 34px;
-  background: #151515;
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+.mission-vision article,
+.features article {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
-.mission-vision article:hover {
-  transform: translateY(-6px);
-  border-color: #d4af37;
+.mission-vision article:hover,
+.features article:hover {
+    transform: translateY(-10px);
 }
 
-.mission-vision h3 {
-  margin-bottom: 12px;
-  color: #d4af37;
-  font-size: 30px;
-}
-
-.mission-vision p {
-  color: #eeeeee;
+.mission-vision h3,
+.features h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #111;
 }
 
 .why-choose {
-  text-align: center;
-  background: #fafafa;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-top: 40px;
-}
-
-.features article {
-  padding: 34px 28px;
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.features article:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.14);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .features span {
-  color: #d4af37;
-  font-weight: 800;
-}
-
-.features h3 {
-  margin: 12px 0;
-  font-size: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #ffd700;
+    color: black;
+    border-radius: 50%;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .founder {
-  color: #ffffff;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
-    url("https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=1600&q=80")
-    center / cover no-repeat;
-}
-
-.founder div {
-  max-width: 760px;
-}
-
-.founder p {
-  margin-bottom: 18px;
-  color: #eeeeee;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 footer {
-  padding: 24px 8%;
-  background: #000000;
-  color: #ffffff;
-  text-align: center;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.7s ease;
 }
 
 .reveal.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 6%;
+    }
 
-@media (max-width: 900px) {
-  .navbar {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 18px;
-  }
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 14px 20px;
-  }
+    .nav-links li {
+        margin-left: 0;
+    }
 
-  .about-section,
-  .mission-vision,
-  .features {
-    grid-template-columns: 1fr;
-  }
+    .banner-content {
+        padding: 70px 6% 60px;
+    }
 
-  .hero-content {
-    padding-top: 90px;
-  }
-}
+    .banner-content h2 {
+        font-size: 36px;
+    }
 
-@media (max-width: 560px) {
-  .navbar,
-  .hero-content,
-  .about-section,
-  .mission-vision,
-  .why-choose,
-  .founder {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+    main {
+        padding: 40px 6%;
+    }
 
-  .logo {
-    font-size: 28px;
-  }
+    .about-section,
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
 
-  .hero-content h2 {
-    font-size: 42px;
-  }
+    .about-text,
+    .about-card,
+    .mission-vision article,
+    .features article,
+    .founder {
+        padding: 25px;
+    }
 
-  .about-card,
-  .mission-vision article,
-  .features article {
-    padding: 26px;
-  }
+    .about-text h2,
+    .why-choose h2,
+    .founder h2 {
+        font-size: 28px;
+    }
 }
