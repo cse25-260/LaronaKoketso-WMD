@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page setup -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | OwenScents</title>
+
+  <!-- Google Fonts for elegant headings and modern body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS file for the About page -->
   <link rel="stylesheet" href="about.css">
 </head>
 
 <body>
+  <!-- Header and hero banner section -->
   <header class="banner">
     <nav class="navbar">
       <h1 class="logo">OwenScents</h1>
 
+      <!-- Website navigation links -->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
-        <li><a href="cart.html">Cart<span id="cart-count">0</span></a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
         <li><a href="about.html" class="active">About Us</a></li>
-         <li><a href="account.html">My Account</a></li>
+        <li><a href="account.html">My Account</a></li>
         <li><a href="reviews.html">Reviews</a></li>
       </ul>
     </nav>
 
+    <!-- Main banner content -->
     <section class="banner-content">
       <p class="small-title">Botswana Fragrance Store</p>
       <h2>Luxury Scents. Confident Expression.</h2>
@@ -35,7 +43,9 @@
     </section>
   </header>
 
+  <!-- Main About Us content -->
   <main>
+    <!-- Story section explaining the background of the business -->
     <section class="about-section reveal">
       <div class="about-text">
         <p class="small-title">Our Story</p>
@@ -51,12 +61,14 @@
         </p>
       </div>
 
+      <!-- Short promise card -->
       <div class="about-card">
         <h3>OwenScents Promise</h3>
         <p>Authentic perfumes, stylish presentation, and fragrances selected with care.</p>
       </div>
     </section>
 
+    <!-- Mission and vision section -->
     <section class="mission-vision reveal">
       <article>
         <h3>Our Mission</h3>
@@ -73,6 +85,7 @@
       </article>
     </section>
 
+    <!-- Features showing why customers should choose OwenScents -->
     <section class="why-choose reveal">
       <p class="small-title">Why Choose Us</p>
       <h2>Fragrance shopping made elegant and trustworthy.</h2>
@@ -98,6 +111,7 @@
       </div>
     </section>
 
+    <!-- Founder information section -->
     <section class="founder reveal">
       <div>
         <p class="small-title">Founder Spotlight</p>
@@ -113,19 +127,23 @@
     </section>
   </main>
 
+  <!-- Footer section -->
   <footer>
     <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
   </footer>
 
- <script>
+  <script>
+    // Updates the cart number in the navigation using localStorage
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem("owenScentsCart")) || [];
       const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
       document.getElementById("cart-count").textContent = totalItems;
     }
 
+    // Select all elements that should animate when they appear on screen
     const revealElements = document.querySelectorAll(".reveal");
 
+    // Creates an observer that watches when sections enter the viewport
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -136,11 +154,13 @@
       threshold: 0.2
     });
 
+    // Apply the reveal animation observer to each reveal element
     revealElements.forEach((element) => {
       observer.observe(element);
     });
 
+    // Run cart count update when the page loads
     updateCartCount();
-</script>
+  </script>
 </body>
 </html>
