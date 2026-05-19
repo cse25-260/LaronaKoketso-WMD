@@ -19,7 +19,7 @@ header {
     color: white;
 }
 
-.navbar {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,24 +31,24 @@ header {
     font-weight: bold;
 }
 
-.nav-links {
+nav ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
-.nav-links li {
+nav ul li {
     margin-left: 20px;
 }
 
-.nav-links a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
 }
 
-.nav-links a:hover,
+nav ul li a:hover,
 .active-link {
     color: #ffd700;
 }
