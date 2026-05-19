@@ -1,139 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Owen Scents</title>
-<link rel="stylesheet" href="style.css">
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owen Scents</title>
+
+    <!-- External CSS file for page styling -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Header section with navigation and hero banner -->
+    <header>
+        <nav>
+            <h1 class="logo">OwenScents</h1>
 
-<header>
-    <nav>
-        <h1 class="logo">OwenScents</h1>
-        <ul>
-          <li><a href="index.html" class="active-link">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="cart.html">Cart<span id="cart-count">0</span></a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="account.html">My Account</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-        </ul>
-    </nav>
+            <!-- Website navigation links -->
+            <ul>
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
 
-<div class="banner">
-  <h2>Discover Your Signature Scent</h2>
-  <p>Luxury fragrances crafted for elegance and confidence.</p>
-  <a href="shop.html" class="shop-now">Shop Now</a>
-</div>
-</header>
+        <!-- Hero banner section -->
+        <div class="banner">
+            <h2>Discover Your Signature Scent</h2>
+            <p>Luxury fragrances crafted for elegance and confidence.</p>
+            <a href="shop.html" class="shop-now">Shop Now</a>
+        </div>
+    </header>
 
-<section class="products">
+    <!-- Featured products section -->
+    <section class="products">
+        <h2>Featured Fragrances</h2>
 
-<h2>Featured Fragrances</h2>
+        <div class="product-container">
+            <!-- Product card 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="Royal Oud fragrance">
+                <h3>Royal Oud</h3>
+                <p>$120</p>
+                <button>Add to Cart</button>
+            </div>
 
-<div class="product-container">
+            <!-- Product card 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1672848812581-f6e71ffa6839?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZyYWdyYW5jZXN8ZW58MHx8MHx8fDA%3D" alt="Velvet Rose fragrance">
+                <h3>Velvet Rose</h3>
+                <p>$95</p>
+                <button>Add to Cart</button>
+            </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1594035910387-fea47794261f">
-<h3>Royal Oud</h3>
-<p>$120</p>
-<button>Add to Cart</button>
-</div>
+            <!-- Product card 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1458538977777-0549b2370168?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="Midnight Amber fragrance">
+                <h3>Midnight Amber</h3>
+                <p>$110</p>
+                <button>Add to Cart</button>
+            </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1672848812581-f6e71ffa6839?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZyYWdyYW5jZXN8ZW58MHx8MHx8fDA%3D">
-<h3>Velvet Rose</h3>
-<p>$95</p>
-<button>Add to Cart</button>
-</div>
+            <!-- Product card 4 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="Prada Milano fragrance">
+                <h3>Prada Milano</h3>
+                <p>$105</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1458538977777-0549b2370168?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D">
-<h3>Midnight Amber</h3>
-<p>$110</p>
-<button>Add to Cart</button>
-</div>
+    <!-- Newsletter signup section -->
+    <section class="newsletter">
+        <h2>Join Our Fragrance Club</h2>
+        <p>Get exclusive deals and new scent releases.</p>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D">
-<h3>Prada Milano</h3>
-<p>$105</p>
-<button>Add to Cart</button>
-</div>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+    </section>
 
-</div>
+    <!-- Footer section -->
+    <footer>
+        <p>© 2026 OwenScents. All Rights Reserved.</p>
+    </footer>
 
-</section>
-
-<section class="newsletter">
-
-<h2>Join Our Fragrance Club</h2>
-<p>Get exclusive deals and new scent releases.</p>
-
-<input type="email" placeholder="Enter your email">
-<button>Subscribe</button>
-
-</section>
-
-<footer>
-
-<p>© 2026 OwenScents. All Rights Reserved.</p>
-
-</footer>
-<script>
-    function getCart() {
-        return JSON.parse(localStorage.getItem("owenScentsCart")) || [];
-    }
-
-    function saveCart(cart) {
-        localStorage.setItem("owenScentsCart", JSON.stringify(cart));
-    }
-
-    function updateCartCount() {
-        const cart = getCart();
-        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-        document.getElementById("cart-count").textContent = totalItems;
-    }
-
-    function addItemToCart(card) {
-        const productName = card.querySelector("h3").textContent;
-        const productPrice = Number(card.querySelector("p").textContent.replace("$", ""));
-        const productImage = card.querySelector("img").src;
-        const cart = getCart();
-        const existingProduct = cart.find(item => item.name === productName);
-
-        if (existingProduct) {
-            existingProduct.quantity++;
-        } else {
-            cart.push({
-                name: productName,
-                price: productPrice,
-                image: productImage,
-                quantity: 1
-            });
+    <script>
+        // Gets the cart from localStorage, or returns an empty array if no cart exists
+        function getCart() {
+            return JSON.parse(localStorage.getItem("owenScentsCart")) || [];
         }
 
-        saveCart(cart);
-        updateCartCount();
-    }
+        // Saves the cart into localStorage
+        function saveCart(cart) {
+            localStorage.setItem("owenScentsCart", JSON.stringify(cart));
+        }
 
-    document.querySelectorAll(".card button").forEach(button => {
-        button.addEventListener("click", () => {
-            const card = button.closest(".card");
-            addItemToCart(card);
+        // Updates the cart number shown in the navigation bar
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById("cart-count").textContent = totalItems;
+        }
 
-            button.textContent = "Added to Cart";
-            button.classList.add("added-to-cart");
+        // Adds a selected product card to the cart
+        function addItemToCart(card) {
+            const productName = card.querySelector("h3").textContent;
+            const productPrice = Number(card.querySelector("p").textContent.replace("$", ""));
+            const productImage = card.querySelector("img").src;
+            const cart = getCart();
+            const existingProduct = cart.find(item => item.name === productName);
 
-            setTimeout(() => {
-                button.textContent = "Add to Cart";
-                button.classList.remove("added-to-cart");
-            }, 1000);
+            // If product already exists in cart, increase quantity
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                // Otherwise add it as a new product
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+            }
+
+            saveCart(cart);
+            updateCartCount();
+        }
+
+        // Add click event to all product buttons
+        document.querySelectorAll(".card button").forEach(button => {
+            button.addEventListener("click", () => {
+                const card = button.closest(".card");
+                addItemToCart(card);
+
+                // Temporarily change button text after adding product
+                button.textContent = "Added to Cart";
+                button.classList.add("added-to-cart");
+
+                setTimeout(() => {
+                    button.textContent = "Add to Cart";
+                    button.classList.remove("added-to-cart");
+                }, 1000);
+            });
         });
-    });
 
-    updateCartCount();
-</script>
+        // Update cart count when the page first loads
+        updateCartCount();
+    </script>
+</body>
 </html>
