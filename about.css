@@ -59,6 +59,20 @@ h3 {
 .nav-links .active {
     color: #ffd700;
 }
+#cart-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    padding: 0 6px;
+    background: #ffd700;
+    color: black;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+}
 
 .banner-content {
     text-align: center;
