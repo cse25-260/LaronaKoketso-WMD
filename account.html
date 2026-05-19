@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account | OwenScents</title>
 
+  <!-- Google Fonts used for stylish headings and body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- External CSS file for this page -->
   <link rel="stylesheet" href="account.css">
 </head>
 
 <body>
+  <!-- Header section with navigation menu -->
   <header class="account-header">
     <nav class="navbar">
       <h1 class="logo">OwenScents</h1>
 
+      <!-- Website navigation links -->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
-        <li><a href="cart.html">Cart<span id="cart-count">0</span></a></li>
+        <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="account.html" class="active-link">My Account</a></li>
         <li><a href="reviews.html">Reviews</a></li>
@@ -28,26 +33,33 @@
     </nav>
   </header>
 
+  <!-- Main account page content -->
   <main class="account-page">
+    <!-- Page introduction/banner -->
     <section class="account-banner">
       <p class="eyebrow">My Account</p>
       <h2>Welcome back to OwenScents</h2>
       <p>Login or create an account to continue shopping authentic luxury fragrances.</p>
     </section>
 
+    <!-- Login and registration forms container -->
     <section class="account-wrapper">
+      <!-- Login form -->
       <form class="account-card login-card" id="loginForm">
         <div class="card-heading">
           <span>01</span>
           <h3>Login</h3>
         </div>
 
+        <!-- Login email/username input -->
         <label for="loginEmail">Email or Username</label>
         <input type="text" id="loginEmail" placeholder="Enter your email or username">
 
+        <!-- Login password input -->
         <label for="loginPassword">Password</label>
         <input type="password" id="loginPassword" placeholder="Enter your password">
 
+        <!-- Extra login options -->
         <div class="form-options">
           <label class="checkbox-row">
             <input type="checkbox" id="rememberMe">
@@ -61,18 +73,22 @@
         <p class="form-message" id="loginMessage"></p>
       </form>
 
+      <!-- Registration form -->
       <form class="account-card register-card" id="registerForm">
         <div class="card-heading">
           <span>02</span>
           <h3>Register</h3>
         </div>
 
+        <!-- Registration email input -->
         <label for="registerEmail">Email</label>
         <input type="email" id="registerEmail" placeholder="Enter your email">
 
+        <!-- Registration password input -->
         <label for="registerPassword">Password</label>
         <input type="password" id="registerPassword" placeholder="Create a password">
 
+        <!-- Privacy notice -->
         <p class="privacy-text">
           Your personal data will be used to support your shopping experience, manage access to your account,
           and improve your OwenScents service.
@@ -84,39 +100,46 @@
     </section>
   </main>
 
+  <!-- Footer section -->
   <footer>
     <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
   </footer>
 
-<script>
+  <script>
+    // Updates the cart number shown in the navigation bar
     function updateCartCount() {
       const cart = JSON.parse(localStorage.getItem("owenScentsCart")) || [];
       const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
       document.getElementById("cart-count").textContent = totalItems;
     }
 
+    // Redirects the user to the shop page after a short delay
     function redirectToShop() {
       setTimeout(() => {
         window.location.href = "shop.html";
       }, 1000);
     }
 
+    // Displays success or error messages under a form
     function showMessage(element, message, type) {
       element.textContent = message;
       element.className = "form-message " + type;
     }
 
+    // Get form and message elements from the page
     const loginForm = document.getElementById("loginForm");
     const registerForm = document.getElementById("registerForm");
     const loginMessage = document.getElementById("loginMessage");
     const registerMessage = document.getElementById("registerMessage");
 
+    // Handles login form submission
     loginForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
       const email = document.getElementById("loginEmail").value.trim();
       const password = document.getElementById("loginPassword").value.trim();
 
+      // Check that both login fields are filled
       if (email === "" || password === "") {
         showMessage(loginMessage, "Please enter your email or username and password.", "error");
         return;
@@ -127,12 +150,14 @@
       redirectToShop();
     });
 
+    // Handles registration form submission
     registerForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
       const email = document.getElementById("registerEmail").value.trim();
       const password = document.getElementById("registerPassword").value.trim();
 
+      // Check that both registration fields are filled
       if (email === "" || password === "") {
         showMessage(registerMessage, "Please enter your email and password.", "error");
         return;
@@ -143,7 +168,8 @@
       redirectToShop();
     });
 
+    // Run cart count update when the page loads
     updateCartCount();
-</script>
+  </script>
 </body>
 </html>
