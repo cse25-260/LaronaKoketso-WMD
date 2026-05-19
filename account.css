@@ -1,31 +1,25 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(2, 6, 12, 0.78), rgba(2, 6, 12, 0.9)),
-    url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1600&q=80")
-    center / cover fixed no-repeat;
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
+    background: #f8f8f8;
+    color: #333;
 }
 
 .account-header {
-  background: rgba(0, 0, 0, 0.78);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  backdrop-filter: blur(12px);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,254 +31,237 @@ nav {
     font-weight: bold;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
-nav ul li {
+.nav-links li {
     margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 16px;
 }
 
-nav ul li a:hover,
+.nav-links a:hover,
 .active-link {
     color: #ffd700;
-
-.account-page {
-  width: min(1180px, 90%);
-  margin: 0 auto;
-  padding: 70px 0 90px;
 }
 
-.account-hero {
-  max-width: 760px;
-  margin-bottom: 38px;
-  animation: fadeUp 0.8s ease both;
+.account-page {
+    padding: 50px 10% 70px;
+}
+
+.account-banner {
+    text-align: center;
+    padding: 45px 10% 35px;
 }
 
 .eyebrow {
-  margin-bottom: 10px;
-  color: #d4af37;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
+    color: #ffd700;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-bottom: 12px;
 }
 
 .account-banner h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  margin-bottom: 14px;
-  font-size: clamp(40px, 6vw, 68px);
-  line-height: 1.05;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #111;
 }
 
 .account-banner p {
-  color: #eeeeee;
-  font-size: 17px;
+    font-size: 18px;
 }
 
 .account-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .account-card {
-  padding: 38px;
-  background: rgba(255, 255, 255, 0.96);
-  color: #111111;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  border-radius: 10px;
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.3);
-  animation: fadeUp 0.8s ease both;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: 0.3s;
 }
 
-.register-card {
-  animation-delay: 0.12s;
+.account-card:hover {
+    transform: translateY(-10px);
 }
 
 .card-heading {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .card-heading span {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  color: #111111;
-  background: #d4af37;
-  border-radius: 50%;
-  font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    background: #ffd700;
+    color: black;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .card-heading h3 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 34px;
+    font-size: 24px;
+    color: #111;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
+.account-card label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 15px 16px;
-  border: 1px solid #d8d8d8;
-  border-radius: 6px;
-  outline: none;
-  font-family: inherit;
-  font-size: 15px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+.account-card input[type="text"],
+.account-card input[type="email"],
+.account-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 18px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.18);
+.account-card input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
 }
 
 .form-options {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .checkbox-row {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin: 0;
-  color: #333333;
-  font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+    font-weight: normal;
 }
 
 .checkbox-row input {
-  accent-color: #d4af37;
+    accent-color: #ffd700;
 }
 
 .lost-link {
-  color: #8b6f1e;
-  font-size: 14px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .lost-link:hover {
-  color: #111111;
+    color: #ffd700;
 }
 
 .privacy-text {
-  margin: 2px 0 22px;
-  color: #555555;
-  font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
-button {
-  width: 100%;
-  padding: 15px 22px;
-  border: 2px solid #d4af37;
-  border-radius: 6px;
-  background: #111111;
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+.account-card button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-button:hover {
-  background: #d4af37;
-  color: #111111;
-  transform: translateY(-2px);
+.account-card button:hover {
+    background: #ffd700;
+    color: black;
 }
 
 .form-message {
-  min-height: 24px;
-  margin-top: 14px;
-  font-size: 14px;
-  font-weight: 600;
+    min-height: 22px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .form-message.success {
-  color: #1d7f46;
+    color: green;
 }
 
 .form-message.error {
-  color: #b42318;
+    color: crimson;
 }
 
 footer {
-  padding: 24px 5%;
-  background: #000000;
-  color: #ffffff;
-  text-align: center;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 6%;
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
 
-/* Responsive layout */
-@media (max-width: 900px) {
-  .navbar {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+    .nav-links li {
+        margin-left: 0;
+    }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 14px 20px;
-  }
+    .account-page {
+        padding: 40px 6% 60px;
+    }
 
-  .account-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
+    .account-banner {
+        padding: 35px 0 30px;
+    }
 
-@media (max-width: 560px) {
-  .account-page {
-    width: 92%;
-    padding-top: 52px;
-  }
+    .account-banner h2 {
+        font-size: 34px;
+    }
 
-  .logo {
-    font-size: 28px;
-  }
+    .account-wrapper {
+        grid-template-columns: 1fr;
+    }
 
-  .account-card {
-    padding: 28px 22px;
-  }
+    .account-card {
+        padding: 25px;
+    }
 
-  .form-options {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
