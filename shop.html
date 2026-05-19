@@ -1,189 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic page setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Owen Scents | Shop</title>
+
+    <!-- External CSS file for shop page styling -->
     <link rel="stylesheet" href="shop.css">
 </head>
+
 <body>
+    <!-- Header section with navigation and shop banner -->
+    <header>
+        <nav>
+            <h1 class="logo">OwenScents</h1>
 
-<header>
-    <nav>
-        <h1 class="logo">OwenScents</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html" class="active-link">Shop</a></li>
-            <li><a href="cart.html">Cart<span id="cart-count">0</span></a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="account.html">My Account</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-        </ul>
-    </nav>
+            <!-- Website navigation links -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active-link">Shop</a></li>
+                <li><a href="cart.html">Cart <span id="cart-count">0</span></a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
 
-    <div class="shop-banner">
-        <h2>Shop Luxury Fragrances</h2>
-        <p>Choose from refined scents for men and elegant fragrances for women.</p>
-    </div>
-</header>
-
-<main>
-    <section class="shop-controls">
-        <div class="tabs">
-            <button class="tab-button active" data-target="male">Male Fragrances</button>
-            <button class="tab-button" data-target="female">Female Fragrances</button>
+        <!-- Shop banner text -->
+        <div class="shop-banner">
+            <h2>Shop Luxury Fragrances</h2>
+            <p>Choose from refined scents for men and elegant fragrances for women.</p>
         </div>
+    </header>
 
-        <input type="search" id="search-input" placeholder="Search fragrances">
+    <main>
+        <!-- Controls for switching product categories and searching products -->
+        <section class="shop-controls">
+            <div class="tabs">
+                <button class="tab-button active" data-target="male">Male Fragrances</button>
+                <button class="tab-button" data-target="female">Female Fragrances</button>
+            </div>
+
+            <input type="search" id="search-input" placeholder="Search fragrances">
+        </section>
+
+        <!-- Male fragrances product section -->
+        <section class="products page active" id="male">
+            <h2>Male Fragrances</h2>
+
+            <div class="product-container">
+                <!-- Male fragrance products -->
+                <div class="card" data-name="Royal Oud"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="Royal Oud fragrance"><h3>Royal Oud</h3><p>$120</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Midnight Amber"><img src="https://images.unsplash.com/photo-1458538977777-0549b2370168?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="Midnight Amber fragrance"><h3>Midnight Amber</h3><p>$110</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Cedar Noir"><img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=600&q=80" alt="Cedar Noir fragrance"><h3>Cedar Noir</h3><p>$98</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Stronger With You"><img src="https://images.unsplash.com/photo-1611242956059-53e4c29e6b22?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Stronger With You fragrance"><h3>Stronger With You</h3><p>$88</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Leather Storm"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="Leather Storm fragrance"><h3>Leather Storm</h3><p>$130</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Black Vetiver"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=600&q=80" alt="Black Vetiver fragrance"><h3>Black Vetiver</h3><p>$115</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Spiced Tobacco"><img src="https://images.unsplash.com/photo-1588514912908-8f5891714f8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Spiced Tobacco fragrance"><h3>Spiced Tobacco</h3><p>$125</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Urban Musk"><img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80" alt="Urban Musk fragrance"><h3>Urban Musk</h3><p>$90</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Silver Sage"><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=600&q=80" alt="Silver Sage fragrance"><h3>Silver Sage</h3><p>$102</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Night Emperor"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80" alt="Night Emperor fragrance"><h3>Night Emperor</h3><p>$140</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Atlas Woods"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80" alt="Atlas Woods fragrance"><h3>Atlas Woods</h3><p>$118</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Amber Knight"><img src="https://images.unsplash.com/photo-1723391962154-8a2b6299bc09?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Amber Knight fragrance"><h3>Amber Knight</h3><p>$112</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Fresh Bergamot"><img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=600&q=80" alt="Fresh Bergamot fragrance"><h3>Fresh Bergamot</h3><p>$86</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Smoked Pine"><img src="https://images.unsplash.com/photo-1544006593-1a0b9255782d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Smoked Pine fragrance"><h3>Smoked Pine</h3><p>$108</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Dark Saffron"><img src="https://images.unsplash.com/photo-1593487568720-92097fb460fb?auto=format&fit=crop&w=600&q=80" alt="Dark Saffron fragrance"><h3>Dark Saffron</h3><p>$128</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Iron Citrus"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=600&q=80" alt="Iron Citrus fragrance"><h3>Iron Citrus</h3><p>$92</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Bourbon Cedar"><img src="https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80" alt="Bourbon Cedar fragrance"><h3>Bourbon Cedar</h3><p>$119</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Noir Legend"><img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&w=600&q=80" alt="Noir Legend fragrance"><h3>Noir Legend</h3><p>$135</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Blue Horizon"><img src="https://images.unsplash.com/photo-1700522360590-a913ff2a3d9f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Blue Horizon fragrance"><h3>Blue Horizon</h3><p>$99</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Imperial Spice"><img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?auto=format&fit=crop&w=600&q=80" alt="Imperial Spice fragrance"><h3>Imperial Spice</h3><p>$122</p><button>Add to Cart</button></div>
+            </div>
+        </section>
+
+        <!-- Female fragrances product section -->
+        <section class="products page" id="female">
+            <h2>Female Fragrances</h2>
+
+            <div class="product-container">
+                <!-- Female fragrance products -->
+                <div class="card" data-name="Velvet Rose"><img src="https://images.unsplash.com/photo-1591375372226-3531cf2eb6d3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxwZXJmdW1lfGVufDB8fDB8fHww" alt="Velvet Rose fragrance"><h3>Velvet Rose</h3><p>$95</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Prada Milano"><img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="Prada Milano fragrance"><h3>Prada Milano</h3><p>$105</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Blush Peony"><img src="https://images.unsplash.com/photo-1533603208986-24fd819e718a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Blush Peony fragrance"><h3>Blush Peony</h3><p>$92</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Pearl Jasmine"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=600&q=80" alt="Pearl Jasmine fragrance"><h3>Pearl Jasmine</h3><p>$108</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Vanilla Bloom"><img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=600&q=80" alt="Vanilla Bloom fragrance"><h3>Vanilla Bloom</h3><p>$99</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Pink Orchid"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="Pink Orchid fragrance"><h3>Pink Orchid</h3><p>$112</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Silk Amber"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80" alt="Silk Amber fragrance"><h3>Silk Amber</h3><p>$118</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Sweet Magnolia"><img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=600&q=80" alt="Sweet Magnolia fragrance"><h3>Sweet Magnolia</h3><p>$89</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Crystal Garden"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="Crystal Garden fragrance"><h3>Crystal Garden</h3><p>$101</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Rose Gold"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80" alt="Rose Gold fragrance"><h3>Rose Gold</h3><p>$116</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Lily Noir"><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=600&q=80" alt="Lily Noir fragrance"><h3>Lily Noir</h3><p>$109</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Honey Blossom"><img src="https://images.unsplash.com/photo-1588177925144-2fd3e4e7ce57?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Honey Blossom fragrance"><h3>Honey Blossom</h3><p>$96</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Moonlit Iris"><img src="https://images.unsplash.com/photo-1723391962090-f17948c190ec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODZ8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Moonlit Iris fragrance"><h3>Moonlit Iris</h3><p>$125</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Soft Cashmere"><img src="https://images.unsplash.com/photo-1593487568720-92097fb460fb?auto=format&fit=crop&w=600&q=80" alt="Soft Cashmere fragrance"><h3>Soft Cashmere</h3><p>$120</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Citrus Muse"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=600&q=80" alt="Citrus Muse fragrance"><h3>Citrus Muse</h3><p>$84</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Dewy Violet"><img src="https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80" alt="Dewy Violet fragrance"><h3>Dewy Violet</h3><p>$91</p><button>Add to Cart</button></div>
+                <div class="card" data-name="White Musk"><img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&w=600&q=80" alt="White Musk fragrance"><h3>White Musk</h3><p>$103</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Scarlet Bloom"><img src="https://images.unsplash.com/photo-1588482587611-692b19ee797b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Scarlet Bloom fragrance"><h3>Scarlet Bloom</h3><p>$114</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Champagne Rose"><img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?auto=format&fit=crop&w=600&q=80" alt="Champagne Rose fragrance"><h3>Champagne Rose</h3><p>$132</p><button>Add to Cart</button></div>
+                <div class="card" data-name="Lavender Mist"><img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80" alt="Lavender Mist fragrance"><h3>Lavender Mist</h3><p>$94</p><button>Add to Cart</button></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter signup section -->
+    <section class="newsletter">
+        <h2>Join Our Fragrance Club</h2>
+        <p>Get exclusive deals and new scent releases.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
     </section>
 
-    <section class="products page active" id="male">
-        <h2>Male Fragrances</h2>
-        <div class="product-container">
-            <div class="card" data-name="Royal Oud"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="Royal Oud fragrance"><h3>Royal Oud</h3><p>$120</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Midnight Amber"><img src="https://images.unsplash.com/photo-1458538977777-0549b2370168?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="Midnight Amber fragrance"><h3>Midnight Amber</h3><p>$110</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Cedar Noir"><img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=600&q=80" alt="Cedar Noir fragrance"><h3>Cedar Noir</h3><p>$98</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Stronger With You"><img src="https://images.unsplash.com/photo-1611242956059-53e4c29e6b22?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Stronger With You fragrance"><h3>Stronger With You</h3><p>$88</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Leather Storm"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="Leather Storm fragrance"><h3>Leather Storm</h3><p>$130</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Black Vetiver"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=600&q=80" alt="Black Vetiver fragrance"><h3>Black Vetiver</h3><p>$115</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Spiced Tobacco"><img src="https://images.unsplash.com/photo-1588514912908-8f5891714f8d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Spiced Tobacco fragrance"><h3>Spiced Tobacco</h3><p>$125</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Urban Musk"><img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80" alt="Urban Musk fragrance"><h3>Urban Musk</h3><p>$90</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Silver Sage"><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=600&q=80" alt="Silver Sage fragrance"><h3>Silver Sage</h3><p>$102</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Night Emperor"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80" alt="Night Emperor fragrance"><h3>Night Emperor</h3><p>$140</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Atlas Woods"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80" alt="Atlas Woods fragrance"><h3>Atlas Woods</h3><p>$118</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Amber Knight"><img src="https://images.unsplash.com/photo-1723391962154-8a2b6299bc09?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Amber Knight fragrance"><h3>Amber Knight</h3><p>$112</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Fresh Bergamot"><img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=600&q=80" alt="Fresh Bergamot fragrance"><h3>Fresh Bergamot</h3><p>$86</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Smoked Pine"><img src="https://images.unsplash.com/photo-1544006593-1a0b9255782d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Smoked Pine fragrance"><h3>Smoked Pine</h3><p>$108</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Dark Saffron"><img src="https://images.unsplash.com/photo-1593487568720-92097fb460fb?auto=format&fit=crop&w=600&q=80" alt="Dark Saffron fragrance"><h3>Dark Saffron</h3><p>$128</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Iron Citrus"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=600&q=80" alt="Iron Citrus fragrance"><h3>Iron Citrus</h3><p>$92</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Bourbon Cedar"><img src="https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80" alt="Bourbon Cedar fragrance"><h3>Bourbon Cedar</h3><p>$119</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Noir Legend"><img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&w=600&q=80" alt="Noir Legend fragrance"><h3>Noir Legend</h3><p>$135</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Blue Horizon"><img src="https://images.unsplash.com/photo-1700522360590-a913ff2a3d9f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Blue Horizon fragrance"><h3>Blue Horizon</h3><p>$99</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Imperial Spice"><img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?auto=format&fit=crop&w=600&q=80" alt="Imperial Spice fragrance"><h3>Imperial Spice</h3><p>$122</p><button>Add to Cart</button></div>
-        </div>
-    </section>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
+    </footer>
 
-    <section class="products page" id="female">
-        <h2>Female Fragrances</h2>
-        <div class="product-container">
-            <div class="card" data-name="Velvet Rose"><img src="https://images.unsplash.com/photo-1591375372226-3531cf2eb6d3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTA3fHxwZXJmdW1lfGVufDB8fDB8fHww" alt="Velvet Rose fragrance"><h3>Velvet Rose</h3><p>$95</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Prada Milano"><img src="https://images.unsplash.com/photo-1610461888750-10bfc601b874?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVyZnVtZXxlbnwwfHwwfHx8MA%3D%3D" alt="Prada Milano fragrance"><h3>Prada Milano</h3><p>$105</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Blush Peony"><img src="https://images.unsplash.com/photo-1533603208986-24fd819e718a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Blush Peony fragrance"><h3>Blush Peony</h3><p>$92</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Pearl Jasmine"><img src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=600&q=80" alt="Pearl Jasmine fragrance"><h3>Pearl Jasmine</h3><p>$108</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Vanilla Bloom"><img src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=600&q=80" alt="Vanilla Bloom fragrance"><h3>Vanilla Bloom</h3><p>$99</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Pink Orchid"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="Pink Orchid fragrance"><h3>Pink Orchid</h3><p>$112</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Silk Amber"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80" alt="Silk Amber fragrance"><h3>Silk Amber</h3><p>$118</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Sweet Magnolia"><img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=600&q=80" alt="Sweet Magnolia fragrance"><h3>Sweet Magnolia</h3><p>$89</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Crystal Garden"><img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="Crystal Garden fragrance"><h3>Crystal Garden</h3><p>$101</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Rose Gold"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80" alt="Rose Gold fragrance"><h3>Rose Gold</h3><p>$116</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Lily Noir"><img src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=600&q=80" alt="Lily Noir fragrance"><h3>Lily Noir</h3><p>$109</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Honey Blossom"><img src="https://images.unsplash.com/photo-1588177925144-2fd3e4e7ce57?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Honey Blossom fragrance"><h3>Honey Blossom</h3><p>$96</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Moonlit Iris"><img src="https://images.unsplash.com/photo-1723391962090-f17948c190ec?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODZ8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Moonlit Iris fragrance"><h3>Moonlit Iris</h3><p>$125</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Soft Cashmere"><img src="https://images.unsplash.com/photo-1593487568720-92097fb460fb?auto=format&fit=crop&w=600&q=80" alt="Soft Cashmere fragrance"><h3>Soft Cashmere</h3><p>$120</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Citrus Muse"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=600&q=80" alt="Citrus Muse fragrance"><h3>Citrus Muse</h3><p>$84</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Dewy Violet"><img src="https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80" alt="Dewy Violet fragrance"><h3>Dewy Violet</h3><p>$91</p><button>Add to Cart</button></div>
-            <div class="card" data-name="White Musk"><img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&w=600&q=80" alt="White Musk fragrance"><h3>White Musk</h3><p>$103</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Scarlet Bloom"><img src="https://images.unsplash.com/photo-1588482587611-692b19ee797b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTV8fHBlcmZ1bWV8ZW58MHx8MHx8fDA%3D" alt="Scarlet Bloom fragrance"><h3>Scarlet Bloom</h3><p>$114</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Champagne Rose"><img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?auto=format&fit=crop&w=600&q=80" alt="Champagne Rose fragrance"><h3>Champagne Rose</h3><p>$132</p><button>Add to Cart</button></div>
-            <div class="card" data-name="Lavender Mist"><img src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80" alt="Lavender Mist fragrance"><h3>Lavender Mist</h3><p>$94</p><button>Add to Cart</button></div>
-        </div>
-    </section>
-</main>
+    <script>
+        // Select important elements used for tabs, search, and cart count
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const pages = document.querySelectorAll(".page");
+        const searchInput = document.getElementById("search-input");
+        const cartCount = document.getElementById("cart-count");
 
-<section class="newsletter">
-    <h2>Join Our Fragrance Club</h2>
-    <p>Get exclusive deals and new scent releases.</p>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
-</section>
+        // Gets the cart from localStorage, or returns an empty array if no cart exists
+        function getCart() {
+            return JSON.parse(localStorage.getItem("owenScentsCart")) || [];
+        }
 
-<footer>
-    <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
-</footer>
+        // Saves the current cart to localStorage
+        function saveCart(cart) {
+            localStorage.setItem("owenScentsCart", JSON.stringify(cart));
+        }
 
-<script>
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const pages = document.querySelectorAll(".page");
-    const searchInput = document.getElementById("search-input");
-    const cartCount = document.getElementById("cart-count");
-       function getCart() {
-        return JSON.parse(localStorage.getItem("owenScentsCart")) || [];
-    }
+        // Updates the number shown beside Cart in the navigation
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
 
-    function saveCart(cart) {
-        localStorage.setItem("owenScentsCart", JSON.stringify(cart));
-    }
+        // Handles switching between male and female fragrance tabs
+        tabButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                tabButtons.forEach(tab => tab.classList.remove("active"));
+                pages.forEach(page => page.classList.remove("active"));
 
-    function updateCartCount() {
-        const cart = getCart();
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-    }
-    tabButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            tabButtons.forEach(tab => tab.classList.remove("active"));
-            pages.forEach(page => page.classList.remove("active"));
+                button.classList.add("active");
+                document.getElementById(button.dataset.target).classList.add("active");
 
-            button.classList.add("active");
-            document.getElementById(button.dataset.target).classList.add("active");
-            searchInput.value = "";
-            filterProducts("");
+                // Clear search when switching categories
+                searchInput.value = "";
+                filterProducts("");
+            });
         });
-    });
 
-    searchInput.addEventListener("input", event => {
-        filterProducts(event.target.value.toLowerCase());
-    });
-
-    function filterProducts(searchTerm) {
-        const activePage = document.querySelector(".page.active");
-        const cards = activePage.querySelectorAll(".card");
-
-        cards.forEach(card => {
-            const productName = card.dataset.name.toLowerCase();
-            card.style.display = productName.includes(searchTerm) ? "block" : "none";
+        // Filters products whenever the user types in the search bar
+        searchInput.addEventListener("input", event => {
+            filterProducts(event.target.value.toLowerCase());
         });
-    }
 
- function addItemToCart(card) {
-        const productName = card.querySelector("h3").textContent;
-        const productPrice = Number(card.querySelector("p").textContent.replace("$", ""));
-        const productImage = card.querySelector("img").src;
-        const cart = getCart();
-        const existingProduct = cart.find(item => item.name === productName);
+        // Shows only products that match the search text
+        function filterProducts(searchTerm) {
+            const activePage = document.querySelector(".page.active");
+            const cards = activePage.querySelectorAll(".card");
 
-        if (existingProduct) {
-            existingProduct.quantity++;
-        } else {
-            cart.push({
-                name: productName,
-                price: productPrice,
-                image: productImage,
-                quantity: 1
+            cards.forEach(card => {
+                const productName = card.dataset.name.toLowerCase();
+                card.style.display = productName.includes(searchTerm) ? "block" : "none";
             });
         }
-                saveCart(cart);
-        updateCartCount();
-    }
-         document.querySelectorAll(".card button").forEach(button => {
-        button.addEventListener("click", () => {
-            const card = button.closest(".card");
-            addItemToCart(card);
-            button.textContent = "Added to Cart";
-            button.classList.add("added-to-cart");
 
-            setTimeout(() => {
-                button.textContent = "Add to Cart";
-                button.classList.remove("added-to-cart");
-            }, 1000);
+        // Adds the selected product to the cart
+        function addItemToCart(card) {
+            const productName = card.querySelector("h3").textContent;
+            const productPrice = Number(card.querySelector("p").textContent.replace("$", ""));
+            const productImage = card.querySelector("img").src;
+            const cart = getCart();
+            const existingProduct = cart.find(item => item.name === productName);
+
+            // If the product already exists, increase its quantity
+            if (existingProduct) {
+                existingProduct.quantity++;
+            } else {
+                // Otherwise, add a new product to the cart
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1
+                });
+            }
+
+            saveCart(cart);
+            updateCartCount();
+        }
+
+        // Add click events to every "Add to Cart" button
+        document.querySelectorAll(".card button").forEach(button => {
+            button.addEventListener("click", () => {
+                const card = button.closest(".card");
+                addItemToCart(card);
+
+                // Temporarily change button text after product is added
+                button.textContent = "Added to Cart";
+                button.classList.add("added-to-cart");
+
+                setTimeout(() => {
+                    button.textContent = "Add to Cart";
+                    button.classList.remove("added-to-cart");
+                }, 1000);
+            });
         });
-    });
-     updateCartCount();
-</script>
 
+        // Update cart count when the page first loads
+        updateCartCount();
+    </script>
 </body>
 </html>
-
-
-
 
