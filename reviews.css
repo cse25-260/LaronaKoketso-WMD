@@ -33,40 +33,34 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: min(80%, 1520px);
-    margin: 0 auto;
-    padding: 28px 0;
+    padding: 20px 10%;
 }
 
 .logo {
-    font-size: 34px;
-    font-weight: 800;
-    letter-spacing: 0;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 nav ul {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 26px;
     list-style: none;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav ul li {
-    margin: 0;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: white;
-    font-size: 20px;
     text-decoration: none;
-    transition: color 0.2s ease;
+    color: white;
+    font-size: 16px;
 }
 
 nav ul li a:hover,
 .active-link {
-    color: var(--gold);
+    color: #ffd700;
 }
 
 #cart-count {
