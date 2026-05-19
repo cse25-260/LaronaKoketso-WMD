@@ -27,9 +27,9 @@ nav {
     padding: 20px 10%;
 }
 
-.logo{
-font-size:28px;
-font-weight:bold;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
 }
 
 nav ul {
@@ -39,20 +39,19 @@ nav ul {
     justify-content: flex-end;
 }
 
-nav ul li{
-margin-left:20px;
+nav ul li {
+    margin-left: 20px;
 }
 
-nav ul li a{
-text-decoration:none;
-color:white;
-font-size:16px;
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
 }
 
-nav ul li a:hover{
-color:#ffd700;
-}
-
+nav ul li a:hover,
+.active-link {
+    color: #ffd700;
 
 .banner{
 text-align:center;
