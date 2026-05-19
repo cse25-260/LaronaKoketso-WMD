@@ -25,41 +25,38 @@ a {
   backdrop-filter: blur(12px);
 }
 
-.navbar {
-  width: min(1180px, 90%);
-  margin: 0 auto;
-  padding: 22px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
 }
 
 .logo {
-  font-family: "Playfair Display", Georgia, serif;
-  color: #d4af37;
-  font-size: 32px;
-  font-weight: 700;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  list-style: none;
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.nav-links a {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  transition: color 0.3s ease;
+nav ul li {
+    margin-left: 20px;
 }
 
-.nav-links a:hover,
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover,
 .active-link {
-  color: #d4af37;
-}
+    color: #ffd700;
 
 .account-page {
   width: min(1180px, 90%);
