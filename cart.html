@@ -132,11 +132,17 @@
     const successMessage = document.getElementById("success-message");
     const backToCartButton = document.getElementById("back-to-cart");
     const checkoutForm = document.getElementById("checkout-form");
+    const cartCountElement = document.getElementById("cart-count");
 
     let cart = JSON.parse(localStorage.getItem("owenScentsCart")) || [];
 
     function saveCart() {
         localStorage.setItem("owenScentsCart", JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        cartCountElement.textContent = totalItems;
     }
 
     function formatMoney(amount) {
@@ -156,6 +162,7 @@
         checkoutTotalElement.textContent = formatMoney(total);
 
         checkoutButton.disabled = cart.length === 0;
+        updateCartCount();
     }
 
     function renderCart() {
@@ -231,8 +238,11 @@
 
     checkoutForm.addEventListener("submit", event => {
         event.preventDefault();
+
         cart = [];
         saveCart();
+        updateCartCount();
+
         checkoutSection.style.display = "none";
         successMessage.style.display = "block";
         window.scrollTo(0, 0);
