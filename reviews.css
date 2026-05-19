@@ -1,13 +1,12 @@
-.write-review h2 {
+.reviews h2 {
     font-size: 32px;
     margin-bottom: 35px;
 }
 
 .review-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    text-align: left;
 }
 
 .review-card {
@@ -16,6 +15,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: 0.3s;
+    text-align: left;
 }
 
 .review-card:hover {
@@ -23,29 +23,28 @@
 }
 
 .review-card h3 {
-    font-size: 20px;
     margin-bottom: 5px;
+    font-size: 20px;
     color: #111;
 }
 
 .product-name {
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .stars {
     color: #ffd700;
     font-size: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .review-card p {
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.review-card button,
-.write-review button {
+.review-card button {
     padding: 10px 20px;
     border: none;
     background: black;
@@ -55,8 +54,7 @@
     font-weight: bold;
 }
 
-.review-card button:hover,
-.write-review button:hover {
+.review-card button:hover {
     background: #ffd700;
     color: black;
 }
@@ -69,13 +67,18 @@
 }
 
 .write-review {
-    background: white;
-    padding: 50px 10%;
+    background: black;
+    color: white;
     text-align: center;
+    padding: 60px 10%;
+}
+
+.write-review h2 {
+    margin-bottom: 25px;
 }
 
 .write-review form {
-    max-width: 700px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -84,7 +87,7 @@
 .write-review textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 5px;
     outline: none;
     font-size: 15px;
@@ -94,13 +97,26 @@
 .write-review input:focus,
 .write-review select:focus,
 .write-review textarea:focus {
-    border-color: #ffd700;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.25);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.35);
 }
 
 .write-review textarea {
     min-height: 120px;
     resize: vertical;
+}
+
+.write-review button {
+    padding: 12px 25px;
+    border: none;
+    background: #ffd700;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.write-review button:hover {
+    background: white;
 }
 
 #formMessage {
@@ -150,6 +166,13 @@ footer {
     }
 
     .write-review {
-        padding: 40px 6% 60px;
+        padding: 60px 6%;
+    }
+
+    .write-review input,
+    .write-review select,
+    .write-review textarea,
+    .write-review button {
+        width: 100%;
     }
 }
