@@ -243,18 +243,18 @@ footer {
 }
 
 @media (max-width: 760px) {
-    .navbar {
+    nav {
         flex-direction: column;
         gap: 18px;
         padding: 20px 6%;
     }
 
-    .nav-links {
+    nav ul {
         justify-content: center;
         gap: 12px;
     }
 
-    .nav-links li {
+    nav ul li {
         margin-left: 0;
     }
 
