@@ -91,6 +91,12 @@
         localStorage.setItem("owenScentsCart", JSON.stringify(cart));
     }
 
+    function updateCartCount() {
+        const cart = getCart();
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItems;
+    }
+
     function addItemToCart(card) {
         const productName = card.querySelector("h3").textContent;
         const productPrice = Number(card.querySelector("p").textContent.replace("$", ""));
@@ -110,12 +116,14 @@
         }
 
         saveCart(cart);
+        updateCartCount();
     }
 
     document.querySelectorAll(".card button").forEach(button => {
         button.addEventListener("click", () => {
             const card = button.closest(".card");
             addItemToCart(card);
+
             button.textContent = "Added to Cart";
             button.classList.add("added-to-cart");
 
@@ -125,6 +133,7 @@
             }, 1000);
         });
     });
+
+    updateCartCount();
 </script>
-</body>
 </html>
