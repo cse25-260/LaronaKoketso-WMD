@@ -117,7 +117,13 @@
     <p>&copy; 2026 OwenScents. All Rights Reserved.</p>
   </footer>
 
-  <script>
+ <script>
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem("owenScentsCart")) || [];
+      const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+      document.getElementById("cart-count").textContent = totalItems;
+    }
+
     const revealElements = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver((entries) => {
@@ -133,6 +139,8 @@
     revealElements.forEach((element) => {
       observer.observe(element);
     });
-  </script>
+
+    updateCartCount();
+</script>
 </body>
 </html>
